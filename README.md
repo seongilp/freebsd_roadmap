@@ -33,12 +33,14 @@
 
 **핵심: 내용의 크기가 아니라 프로세스 한 바퀴가 목표.**
 
-- [ ] FreeBSD Bugzilla 계정 생성
+> 채널 정리 (2026 현행): src의 작은 변경은 **GitHub PR이 공식 권장 경로** ([CONTRIBUTING.md](https://github.com/freebsd/freebsd-src/blob/main/CONTRIBUTING.md)). 버그 리포트와 ports 패치는 Bugzilla. 같은 변경을 두 채널에 중복 제출 금지.
+
+- [ ] freebsd-src fork 준비 (GitHub 계정은 이미 있음)
 - [ ] 전공 분야 맨페이지/문서에서 개선 후보 찾기 — 후보 사냥터:
   - `nvmf(4)`, `nvmecontrol(8)` — NVMe-oF는 신생 서브시스템이라 문서 공백이 많다
   - `ctld(8)`, `iscsi(4)` — 실제로 쓰고 있는 iSCSI 스택
   - `tcp_rack(4)`, `tcp_bbr(4)` — pluggable TCP 스택 문서
-- [ ] 패치 작성 (`git diff` 형식) + Bugzilla 제출
+- [ ] 패치 작성 → **GitHub PR 제출** (fork → branch → PR; 커밋 메시지는 FreeBSD 관례를 따름)
 - [ ] 피드백 대응 → 머지될 때까지 팔로우업
 
 ## Phase 2 — 이름 쌓기 (목표: ~3개월)
