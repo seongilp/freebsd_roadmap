@@ -2,6 +2,15 @@
 
 > 최신이 위로.
 
+## 2026-07-18 (2) — 자작 NanoBSD NAS "zen" 공개 & 수리 🛠️
+
+- **사용자가 독학으로 NanoBSD 커스텀 NAS OS(zen)를 빌드해 VM으로 가동 중이었음이 밝혀짐** (USB 썸드라이브 타깃 연습용)
+  - 15.1 기반, tmpfs /etc·/var(플래시 마모 보호), 32M cfg 파티션, 자작 rc.d(zenzpool), Samba+NFS+rsyncd+ftpd+lighttpd, ZFS 풀(tank) 분리 — 사실상 미니 FreeNAS
+- 수리한 것: GPT [CORRUPT](이미지<디스크 크기의 고전 증상) → `gpart recover` + growfs 수동 재실행(firstboot 1회성이라 재부팅으론 안 돎) → 루트 109%→18%
+- 발견 1: rc.conf의 `growfs_type=nanobsd-pingpong`은 **FreeBSD base에 존재하지 않는 가공의 knob** (15.1/CURRENT 모두 부재) — 출처 불명 가이드 주의 사례
+- 발견 2: ssh 호스트 키가 tmpfs /etc에 있어 부팅마다 재생성 → cfg 영속화 필요
+- zen TODO: NANO_IMAGES=2로 진짜 A/B, updatep1/2 업그레이드 절차, 호스트키 영속화, first-boot gpart recover 자동화
+
 ## 2026-07-18
 
 - FreeBSD Bugzilla 계정 승인됨 (bugmeister 수동 심사 — AI 스팸 때문에 자동가입 폐지된 시대 ㅋ)
