@@ -2,6 +2,15 @@
 
 > 최신이 위로.
 
+## 2026-07-18 (7) — lsd 입양에 두 번째 커미터 (Mark Linimon)
+
+- **Mark Linimon**(FreeBSD ports 버그 트리아지의 산증인, 수십년 ports Bugzilla 관리)이 Bug 296864 제목 정리:
+  `[MAINTAINER] sysutils/lsd: adopt port` → `sysutils/lsd: adopt port`
+- **관례 학습**: `[MAINTAINER]` 접두어는 *기존* 메인테이너가 자기 port 고칠 때 붙이는 것. 고아 port *입양*은 그냥 `sysutils/xxx: adopt port`가 정확. → 다음 입양 땐 이 형식으로.
+- 제목 정리 = 거절 아니라 **트리아지(정식 처리 대기열에 올림)**. 3시간 만에 커미터 2명(Vladimir 첨부정정 + Mark 제목표준화)이 손댐 = ports 큐 치고 매우 빠름(깔끔한 케이스라 다들 통과 모드).
+- 대화 흐름: 01:10 나(요청+패치) → 01:56 Vladimir(patch 인식) → 03:07 Mark(제목). 다음은 누가 commit → Closed/FIXED + 나 lsd 메인테이너 등극.
+- 할 일 = 여전히 기다리기.
+
 ## 2026-07-18 (6) — 왜 하는가: 한국인 FreeBSD 커미터라는 빈자리 🇰🇷🐡
 
 `git log`(magit-log)로 CURRENT 최근 커밋들을 훑다가 깨달은 것 — 커밋 저자가 거의 유럽/미국/일본(Bjoern Zeeb 독일, Konstantin Belousov 러시아, Kurosawa/Ichiki 일본...). **한국인 FreeBSD 커미터는 극히 드물다.**
