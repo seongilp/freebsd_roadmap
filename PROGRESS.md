@@ -2,6 +2,16 @@
 
 > 최신이 위로.
 
+## 2026-07-18 (5) — 첫 리뷰어 반응 (lsd 입양)
+
+- **Bug 296864에 FreeBSD ports 커미터 Vladimir Druzenko(vvd@FreeBSD.org)가 반응**
+  - 본인을 CC에 추가(= 지켜보겠다는 신호)
+  - 첨부 메타데이터 정정: `is patch: 0→1`, mime `application/mbox → text/plain`
+  - 원인: git format-patch 결과물이 `From ...` 헤더로 시작해 Bugzilla가 mbox로 오인 → 다음 patch 첨부 땐 `git diff` 형식 쓰거나 mime을 text/plain으로 직접 지정할 것
+- 현재 상태: Status=New, Assignee=freebsd-ports-bugs(Nobody) — 아직 담당 커미터 미배정(정상). 이제 patch로 표시돼 Details/Diff 링크 생김 = 커미터가 클릭 적용 가능
+- **할 일 = 없음, 기다리기.** 흐름: 커미터가 집어감 → patch 적용 커밋 → Closed/FIXED + 나 lsd 메인테이너 등극. 며칠~몇 주.
+- 의미: 기여가 커뮤니티와 처음 상호작용. 커널 blame에 이름(nvmf) + ports 리뷰 진행(lsd), 두 트랙 다 살아 움직이는 중.
+
 ## 2026-07-18 (4) — 개발 환경 완성 + 커널 blame에 내 이름 🎯
 
 - **fish 셸 이관** — bash → fish 기본 셸 (fb-crnt). alias(ls/l/t/gos/gop/ds), starship, fzf, broot, git완성 다 이관. git 자동완성/자동제안/구문 하이라이팅은 fish 기본 내장(설정 0). ble.sh는 GNU 도미노(gmake/gawk) 겪고 "지저분"해서 폐기 → fish로. GNU 걷어내는 게 FreeBSD 정신과도 맞음 ㅋ
