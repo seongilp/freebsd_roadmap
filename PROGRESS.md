@@ -2,6 +2,18 @@
 
 > 최신이 위로.
 
+## 2026-07-18 (4) — 개발 환경 완성 + 커널 blame에 내 이름 🎯
+
+- **fish 셸 이관** — bash → fish 기본 셸 (fb-crnt). alias(ls/l/t/gos/gop/ds), starship, fzf, broot, git완성 다 이관. git 자동완성/자동제안/구문 하이라이팅은 fish 기본 내장(설정 0). ble.sh는 GNU 도미노(gmake/gawk) 겪고 "지저분"해서 폐기 → fish로. GNU 걷어내는 게 FreeBSD 정신과도 맞음 ㅋ
+- **clangd 커널 탐색 개통** — Doom+eglot+clangd로 `/usr/src` 정의점프(gd) 됨. 삽질 교훈: init.el에 `(cc +lsp)`/`(lsp +eglot)` 켜는 게 **1순위**였는데 compile_commands.json부터 파느라 30분 헤맴. LSP 켜짐 확인 → doom sync → Emacs 재시작 순서. compile DB는 intercept-build로 nvmf 모듈 캡처 + `-I.`→obj절대경로 치환(위치독립).
+- **커널 blame에서 내 이름 확인** — `nvmf.c` 306줄 → gd → `nvmf_transport.c` 우리 패치 도착 → `SPC g B`(magit-blame):
+  ```
+  69  Seongil Park   2026-07-18  nvmf: Report when no transport...   ← 나
+  72  John Baldwin   2024-05-03  nvmf: Add infrastructure kernel...  ← nvmf 창시자
+  ```
+  내 코드가 서브시스템 창시자(jhb, 내 PR 리뷰어) 코드와 같은 함수에 나란히. PR #2329 머지되면 본가 blame에 영구 기록.
+- 일주일 전 "buildworld가 뭐야?" → 오늘 자기가 고친 커널 코드에 점프로 도착 + blame에 이름.
+
 ## 2026-07-18 (3) — 첫 기여 2건 제출! 🚀🚀
 
 **하루에 src PR + ports 입양 둘 다 세상에 냄. Phase 1(첫 패치) + Phase 2a(메인테이너) 동시 진입.**
