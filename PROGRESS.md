@@ -2,6 +2,24 @@
 
 > 최신이 위로.
 
+## 2026-07-18 (3) — 첫 기여 2건 제출! 🚀🚀
+
+**하루에 src PR + ports 입양 둘 다 세상에 냄. Phase 1(첫 패치) + Phase 2a(메인테이너) 동시 진입.**
+
+### src 기여: nvmf 진단 메시지 (GitHub PR #2329)
+- https://github.com/freebsd/freebsd-src/pull/2329
+- `nvmf: Report when no transport is registered for a host association`
+- 직접 발견한 UX 함정(nvmf_tcp 미로드 시 오해 유발 에러) 수정
+- 전 과정 통과: style(9) checkstyle9 0 errors → 모듈 컴파일(-Werror, kprintf 포맷검사 통과) → 런타임 검증(dmesg에 `NVMF: No transport registered for trtype N` 실제 출력 확인) → 커밋 → fork push → PR
+- 배운 것: 커널 모듈 반영 3단계(빌드≠설치≠로드), /boot/kernel이 /boot/modules보다 우선, git format-patch로 VM→Mac 패치 이송(fb-crnt엔 gh 토큰 없어서)
+
+### ports 기여: lsd 입양 (Bugzilla Bug 296864)
+- https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=296864
+- `[MAINTAINER] sysutils/lsd: adopt port` — 고아 port(ports@) 입양, MAINTAINER를 내 이메일로
+- ports 워크플로 학습: portlint(경고 읽는 법 — "내 변경과 무관한 기존 경고는 무시"), ports는 GitHub PR이 아니라 **Bugzilla + patch 첨부**로 제출(src와 정책 다름), `[MAINTAINER]` 제목 접두어 관례
+- poudriere는 이번엔 불필요(텍스트 한 줄 변경) → difftastic 신규 port 때 데뷔 예정
+
+**다음**: ① 두 건 리뷰 대응 (nvmf=jhb, lsd=ports 팀) ② difftastic 신규 port (+poudriere)
 ## 2026-07-18 (2) — 자작 NanoBSD NAS "zen" 공개 & 수리 🛠️
 
 - **사용자가 독학으로 NanoBSD 커스텀 NAS OS(zen)를 빌드해 VM으로 가동 중이었음이 밝혀짐** (USB 썸드라이브 타깃 연습용)
