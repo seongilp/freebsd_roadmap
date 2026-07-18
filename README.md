@@ -101,4 +101,4 @@ make -j8 buildworld                            # 증분이라 몇 분
 
 ## 진행 로그
 
-[PROGRESS.md](PROGRESS.md) 참고.
+[PROGRESS.md](PROGRESS.md) 참고. 다음 할 것 후보는 [TODO.md](TODO.md).
