@@ -92,3 +92,20 @@
 1. Doom `~/.config/doom/init.el`에 `(lsp +eglot)` + `(cc +lsp)` 주석 풀렸나 → `ds`(doom sync) → **Emacs 완전 재시작**
 2. `/usr/src/compile_commands.json` 있나 (intercept-build로 생성, `-I.`은 obj 절대경로로)
 3. `gd`가 TAGS 물으면 = LSP 안 붙은 것 (1번 확인)
+
+## Org mode (메모·할일·일정)
+
+`.org` 확장자면 자동 인식. `*`로 제목, `** TODO`로 할일, `SCHEDULED: <날짜>`로 일정.
+
+| 키 | 뜻 |
+|---|---|
+| `TAB` / `SPC TAB` | 제목 / 문서 전체 접기·펼치기 |
+| **`SPC m t`** | TODO ↔ DONE 토글 |
+| `SPC m d s` | 날짜(SCHEDULED) 넣기 |
+| `C-c C-c` | 체크박스 토글 · 코드블록 실행(Babel) |
+| **`SPC o A`** → `t` | 아젠다: 전체 TODO 모아보기 |
+
+아젠다 화면: `t` 완료토글 · `RET` 원본점프 · `q` 닫기
+
+> ⚠️ 함정: 아젠다가 비어 보이면 = 파일이 `org-agenda-files`에 미등록.
+> config.el: `(setq org-agenda-files (list "~/" "~/org/" "~/work/"))` → `SPC : doom/reload`.
