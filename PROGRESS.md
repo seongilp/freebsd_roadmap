@@ -2,6 +2,20 @@
 
 > 최신이 위로.
 
+## 2026-07-18 (6) — 왜 하는가: 한국인 FreeBSD 커미터라는 빈자리 🇰🇷🐡
+
+`git log`(magit-log)로 CURRENT 최근 커밋들을 훑다가 깨달은 것 — 커밋 저자가 거의 유럽/미국/일본(Bjoern Zeeb 독일, Konstantin Belousov 러시아, Kurosawa/Ichiki 일본...). **한국인 FreeBSD 커미터는 극히 드물다.**
+
+배경: 한국은 리눅스 절대 우세라 BSD 저변이 얇음. 일본은 유닉스 문화가 두터워 BSD 커뮤니티 강함(AsiaBSDCon도 도쿄) — 대조가 뼈아픔. 오픈소스 upstream 기여 문화 자체가 한국에선 아직 얇음.
+
+**뒤집으면 이게 기회다:**
+- 희소성 = 가치. 레드오션 1만등보다 블루오션 선구자.
+- AsiaBSDCon 등에서 한국 발표자는 귀함. "홈랩으로 FreeBSD committer 된 한국인 이야기"는 그 자체로 화제.
+- 이 저장소가 한국어 → 나중에 "FreeBSD 하고 싶은 한국인"에게 지도가 될 수 있음.
+- "한국 이름이 안 보인다" = "내 자리가 없다"가 아니라 **"아직 비어있는 자리가 있다"**.
+
+지금 magit-log 맨 위에 이미 `Seongil Park`(nvmf 커밋, 3시간 전)가 Bjoern/Mark/Konstantin 사이에 있음. 꾸준함이 무기 — 이 페이스면 몇 달 뒤 이 로그에 정기적으로 등장하게 된다. **그게 이 로드맵을 하는 이유.**
+
 ## 2026-07-18 (5) — 첫 리뷰어 반응 (lsd 입양)
 
 - **Bug 296864에 FreeBSD ports 커미터 Vladimir Druzenko(vvd@FreeBSD.org)가 반응**
